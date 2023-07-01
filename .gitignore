@@ -1,4 +1,16 @@
 dist
+.vscode
+src
+.appveyor.yml
+.babelrc
+.browserslistrc
+.editorconfig
+.eslintignore
+licenses.txt
+package-lock.json
+package.json
+webpack.config.js
+README.md
 doc
 .idea
 
