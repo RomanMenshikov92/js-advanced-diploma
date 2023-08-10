@@ -1,16 +1,13 @@
 import Character from '../Character';
 
+// Undead - зомби, восставший из мертвых
 export default class Undead extends Character {
-  constructor(level, type = 'undead') {
-    super(level);
-    if (type !== 'undead') {
-      throw new Error('Некорректный тип персонажа');
-    } else {
-      this.type = type;
-    }
+  constructor(level) {
+    super(level, 'undead');
     this.attack = 40;
     this.defence = 10;
-    this.attackDistance = 1;
-    this.moveDistance = 4;
+
+    this.allowableMove = 1;
+    this.allowableAttack = 4;
   }
 }
