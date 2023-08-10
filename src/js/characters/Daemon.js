@@ -1,13 +1,16 @@
 import Character from '../Character';
 
-// Daemon - демон
 export default class Daemon extends Character {
-  constructor(level) {
-    super(level, 'daemon');
+  constructor(level, type = 'daemon') {
+    super(level);
+    if (type !== 'daemon') {
+      throw new Error('Некорректный тип персонажа');
+    } else {
+      this.type = type;
+    }
     this.attack = 10;
-    this.defence = 10;
-
-    this.allowableMove = 4;
-    this.allowableAttack = 1;
+    this.defence = 40;
+    this.attackDistance = 4;
+    this.moveDistance = 1;
   }
 }

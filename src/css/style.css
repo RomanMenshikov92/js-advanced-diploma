@@ -2,7 +2,8 @@
   --cell-size: 64px;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
@@ -19,11 +20,12 @@ body {
   background-color: #f8f9fa;
   text-align: center;
   vertical-align: middle;
-  padding: .375rem .75rem;
+  padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
-  border-radius: .25rem;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   border: none;
 }
 
@@ -174,35 +176,35 @@ body {
 }
 
 .character.generic {
-  background: url('../img/characters/generic.png');
+  background: url('../img/Characters/generic.png');
 }
 
 .character.bowman {
-  background: url('../img/characters/bowman.png');
+  background: url('../img/Characters/bowman.png');
 }
 
 .character.daemon {
-  background: url('../img/characters/daemon.png');
+  background: url('../img/Characters/daemon.png');
 }
 
 .character.magician {
-  background: url('../img/characters/magician.png');
+  background: url('../img/Characters/magician.png');
 }
 
 .character.swordsman {
-  background: url('../img/characters/swordsman.png');
+  background: url('../img/Characters/swordsman.png');
 }
 
 .character.undead {
-  background: url('../img/characters/undead.png');
+  background: url('../img/Characters/undead.png');
 }
 
 .character.vampire {
-  background: url('../img/characters/vampire.png');
+  background: url('../img/Characters/vampire.png');
 }
 
 .character.zombie {
-  background: url('../img/characters/zombie.png');
+  background: url('../img/Characters/zombie.png');
 }
 
 .health-level {

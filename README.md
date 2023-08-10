@@ -164,7 +164,7 @@
 
 ### Создание классов персонажей
 
-Создайте папку `src/js/characters` и создайте в ней одноимённые файлы с классами персонажей,
+Создайте папку `src/js/Characters` и создайте в ней одноимённые файлы с классами персонажей,
 которые наследуются от базового класса `src/js/Character.js`
 
 Описание свойств персонажа:
@@ -253,10 +253,10 @@ _Класс Team_ хранит команду игрока или соперни
 Например:
 
 ```js
-const characters = [new Swordsman(2), new Bowman(3)]; // Обратите внимание на new в отличие от playerTypes в прошлом примере
-const team = new Team(characters);
+const Characters = [new Swordsman(2), new Bowman(3)]; // Обратите внимание на new в отличие от playerTypes в прошлом примере
+const team = new Team(Characters);
 
-team.characters; // [swordsman, bowman]
+team.Characters; // [swordsman, bowman]
 ```
 
 #### generateTeam
@@ -270,9 +270,9 @@ _generateTeam_ - формирует команду на основе `characterG
 const playerTypes = [Bowman, Swordsman, Magician]; // доступные классы игрока
 const team = generateTeam(playerTypes, 3, 4); // массив из 4 случайных персонажей playerTypes с уровнем 1, 2 или 3
 
-team.characters[0].level; // 3
-team.characters[1].level; // 3
-team.characters[2].level; // 1
+team.Characters[0].level; // 3
+team.Characters[1].level; // 3
+team.Characters[2].level; // 1
 ```
 
 ### Отрисовка команд персонажей
