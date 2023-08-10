@@ -40,12 +40,18 @@ export default class Team {
 
   createClass(name, level) {
     switch (name) {
-      case 'Bowman': return new Bowman(level);
-      case 'Swordsman': return new Swordsman(level);
-      case 'Magician': return new Magician(level);
-      case 'Daemon': return new Daemon(level);
-      case 'Undead': return new Undead(level);
-      case 'Vampire': return new Vampire(level);
+      case 'Bowman':
+        return new Bowman(level);
+      case 'Swordsman':
+        return new Swordsman(level);
+      case 'Magician':
+        return new Magician(level);
+      case 'Daemon':
+        return new Daemon(level);
+      case 'Undead':
+        return new Undead(level);
+      case 'Vampire':
+        return new Vampire(level);
       // no default
     }
     return false;
@@ -107,7 +113,12 @@ export default class Team {
     if (level > 4) {
       minCharLevel = level - 4;
     }
-    this.characters = generateTeam(this.#allowedTypesPlayerComp, minCharLevel, level, count);
+    this.characters = generateTeam(
+      this.#allowedTypesPlayerComp,
+      minCharLevel,
+      level,
+      count,
+    );
     this.characters.forEach((item) => {
       this.updatesCharacteristics(item);
     });
