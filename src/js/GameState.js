@@ -1,29 +1,24 @@
-/* eslint-disable no-unused-vars */
 export default class GameState {
-  static from(object) {
-    // TODO: create object
-    return null;
+  constructor() {
+    this.bestPoints = 0;
+    this.gameData = null;
   }
 
-  constructor(
-    theme,
-    scorePlayer1,
-    scorePlayer2,
-    positionedCharacterArray,
-    selectedIndex,
-    selectedCharacter,
-    counterCharacterPlayer1,
-    counterCharacterPlayer2,
-  ) {
-    this.theme = theme;
-    this.scorePlayer1 = scorePlayer1;
-    this.scorePlayer2 = scorePlayer2;
-    this.positionedCharacterArray = positionedCharacterArray;
+  saveBestPoints(points) {
+    if (points > this.bestPoints) {
+      this.bestPoints = points;
+    }
+  }
 
-    this.selectedIndex = selectedIndex;
-    this.selectedCharacter = selectedCharacter;
-
-    this.counterCharacterPlayer1 = counterCharacterPlayer1;
-    this.counterCharacterPlayer2 = counterCharacterPlayer2;
+  saveDataGame(data) {
+    this.gameData = {
+      level: data.level,
+      turn: data.turn,
+      points: data.points,
+      userTeam: data.userTeam,
+      compTeam: data.compTeam,
+      characters: data.characters,
+    };
+    return this.gameData;
   }
 }

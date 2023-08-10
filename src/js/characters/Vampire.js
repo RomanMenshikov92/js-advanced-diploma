@@ -1,13 +1,16 @@
 import Character from '../Character';
 
-// Vampire - вампир
 export default class Vampire extends Character {
-  constructor(level) {
-    super(level, 'vampire');
+  constructor(level, type = 'vampire') {
+    super(level);
+    if (type !== 'vampire') {
+      throw new Error('Некорректный тип персонажа');
+    } else {
+      this.type = type;
+    }
     this.attack = 25;
     this.defence = 25;
-
-    this.allowableMove = 2;
-    this.allowableAttack = 2;
+    this.attackDistance = 2;
+    this.moveDistance = 2;
   }
 }
